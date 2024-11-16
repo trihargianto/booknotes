@@ -1,6 +1,7 @@
 ---
 import DefaultLayout from "@/layouts/DefaultLayout.astro";
-import Body from "../components/Body.astro";
+import Body from "@/components/Body.astro";
+import GreetingBanner from "@/components/GreetingBanner.astro";
 
 import Navbar from "../components/Navbar";
 ---
@@ -9,6 +10,8 @@ import Navbar from "../components/Navbar";
   <Navbar client:load />
 
   <Body>
-    <p class="text-ctp-text">The content goes here</p>
+    <p class="text-ctp-text">
+      <GreetingBanner />
+    </p>
   </Body>
 </DefaultLayout>
