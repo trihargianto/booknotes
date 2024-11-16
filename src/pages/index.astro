@@ -1,7 +1,14 @@
 ---
-import "@/styles/globals.css";
+import DefaultLayout from "@/layouts/DefaultLayout.astro";
+import Body from "../components/Body.astro";
+
+import Navbar from "../components/Navbar";
 ---
 
-<div class="bg-ctp-base text-ctp-text">
-  Catppuccin with TailwindCSS is here!
-</div>
+<DefaultLayout title="Homepage">
+  <Navbar client:load />
+
+  <Body>
+    <p class="text-ctp-text">The content goes here</p>
+  </Body>
+</DefaultLayout>
