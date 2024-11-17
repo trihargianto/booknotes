@@ -4,4 +4,5 @@ export type BookType = {
   title: string;
   author: string;
   synopsis: string;
+  tags: string[];
 };
