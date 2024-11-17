@@ -18,6 +18,7 @@ const books: BookType[] = [
     author: "Tiago Forte",
     synopsis:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget odio sit amet ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget odio sit amet ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget odio sit amet ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget odio sit amet ipsum.",
+    tags: ["Productivity", "Knowledge", "Evergreen Note"],
   },
   {
     id: 2,
@@ -26,6 +27,7 @@ const books: BookType[] = [
     author: "James Clear",
     synopsis:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget odio sit amet ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget odio sit amet ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget odio sit amet ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget odio sit amet ipsum.",
+    tags: ["Habits", "Productivity"],
   },
   {
     id: 3,
@@ -34,6 +36,7 @@ const books: BookType[] = [
     author: "Cal Newport",
     synopsis:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget odio sit amet ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget odio sit amet ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget odio sit amet ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget odio sit amet ipsum.",
+    tags: ["Productivity", "Focus"],
   },
 ];
 
@@ -46,6 +49,7 @@ export default function BookCarousel() {
     title: "",
     author: "",
     synopsis: "",
+    tags: [],
   });
 
   const settings = {
