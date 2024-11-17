@@ -2,6 +2,7 @@
 import DefaultLayout from "@/layouts/DefaultLayout.astro";
 import Body from "@/components/Body.astro";
 import GreetingBanner from "@/components/GreetingBanner.astro";
+import BookCard from "@/components/BookCard.astro";
 
 import Navbar from "../components/Navbar";
 ---
@@ -13,5 +14,13 @@ import Navbar from "../components/Navbar";
     <p class="text-ctp-text">
       <GreetingBanner />
     </p>
+
+    <div class="w-[60%]">
+      <BookCard
+        img="https://picsum.photos/id/237/300/100"
+        title="Building a Second Brain"
+        author="Tiago Forte"
+      />
+    </div>
   </Body>
 </DefaultLayout>
