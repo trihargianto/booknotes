@@ -11,6 +11,10 @@ interface Props {
 }
 
 export default function BookDrawer({ isOpen, setOpen, book }: Props) {
+  function goToReadNotePage() {
+    window.location.href = `/read/dummy`;
+  }
+
   return (
     <Drawer open={isOpen} onOpenChange={setOpen}>
       <DrawerContent className="px-4 pb-4">
@@ -55,7 +59,7 @@ export default function BookDrawer({ isOpen, setOpen, book }: Props) {
             Buy
           </Button>
 
-          <Button variant="primary">
+          <Button variant="primary" onClick={goToReadNotePage}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

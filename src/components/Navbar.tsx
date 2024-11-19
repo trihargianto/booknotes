@@ -1,6 +1,18 @@
-import { SunIcon, BookOpenIcon } from "@heroicons/react/24/outline";
+import {
+  SunIcon,
+  BookOpenIcon,
+  ArrowLeftIcon,
+} from "@heroicons/react/24/outline";
 
-export default function Navbar() {
+interface NavbarProps {
+  pageTitle?: string;
+  isBackButtonVisible?: boolean;
+}
+
+export default function Navbar({
+  pageTitle,
+  isBackButtonVisible,
+}: NavbarProps) {
   function toggleDarkMode() {
     const darkClass = "ctp-machhiato";
     const lightClass = "ctp-latte";
@@ -20,13 +32,30 @@ export default function Navbar() {
     localStorage.setItem("theme", isLight ? darkClass : lightClass);
   }
 
-  return (
-    <nav className="flex justify-between items-center px-4 py-4 border-b border-b-ctp-surface0">
-      <div className="inline-flex items-center">
-        <BookOpenIcon className="size-8 mr-1 text-ctp-text" />
+  function goPreviousPage() {
+    window.history.back();
+  }
 
-        <span className="text-xl font-bold text-ctp-text">Book Notes</span>
-      </div>
+  return (
+    <nav className="flex justify-between items-center px-4 py-4 border-b border-b-ctp-surface0 gap-6">
+      <a href="/" className="inline-flex items-center">
+        {!isBackButtonVisible ? (
+          <>
+            <BookOpenIcon className="size-8 mr-1 text-ctp-text" />
+            <span className="text-xl font-bold text-ctp-text">Book Notes</span>
+          </>
+        ) : (
+          <button type="button" onClick={goPreviousPage}>
+            <ArrowLeftIcon className="size-8 text-ctp-overlay1" />
+          </button>
+        )}
+      </a>
+
+      {pageTitle && (
+        <h1 className="text-xl font-bold text-ctp-text truncate">
+          {pageTitle}
+        </h1>
+      )}
 
       <button onClick={toggleDarkMode}>
         <SunIcon className="text-ctp-overlay1 size-9" />

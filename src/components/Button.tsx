@@ -8,9 +8,14 @@ export type ButtonPropTypes = {
   children: React.ReactNode;
   variant?: ButtonVariantTypes;
   isActive?: boolean;
+  onClick?: () => void;
 } & React.ComponentProps<"button">;
 
-const Button = ({ variant = "primary", children }: ButtonPropTypes) => {
+const Button = ({
+  variant = "primary",
+  onClick,
+  children,
+}: ButtonPropTypes) => {
   return (
     <button
       className={cn([
@@ -19,6 +24,7 @@ const Button = ({ variant = "primary", children }: ButtonPropTypes) => {
           : "text-ctp-text bg-ctp-surface1 border-ctp-surface2 border hover:bg-ctp-surface2",
         "rounded-full font-bold text-base p-4 shadow-lg inline-flex gap-1 items-center justify-center w-full",
       ])}
+      onClick={onClick}
     >
       {children}
     </button>

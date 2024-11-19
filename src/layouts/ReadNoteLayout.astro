@@ -1,0 +1,19 @@
+---
+import DefaultLayout from "./DefaultLayout.astro";
+import Navbar from "@/components/Navbar";
+import Body from "@/components/Body.astro";
+---
+
+<DefaultLayout title="Read Note">
+  <Navbar
+    client:load
+    isBackButtonVisible={true}
+    pageTitle="Building a Second Brain"
+  />
+
+  <Body>
+    <article class="prose prose-p:text-ctp-text prose-headings:text-ctp-text">
+      <slot />
+    </article>
+  </Body>
+</DefaultLayout>
