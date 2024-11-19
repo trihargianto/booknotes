@@ -5,6 +5,7 @@ import GreetingBanner from "@/components/GreetingBanner.astro";
 
 import Navbar from "@/components/Navbar";
 import BookCarousel from "@/components/BookCarousel";
+import BookList from "@/components/BookList";
 ---
 
 <DefaultLayout title="Homepage">
@@ -17,6 +18,10 @@ import BookCarousel from "@/components/BookCarousel";
 
     <div class="mt-10">
       <BookCarousel client:load />
+    </div>
+
+    <div class="mt-10">
+      <BookList client:load />
     </div>
   </Body>
 </DefaultLayout>
