@@ -1,5 +1,6 @@
 import catppuccin from "@catppuccin/tailwindcss";
 import tailwindcssAnimate from "tailwindcss-animate";
+import tailwindcssTypography from "@tailwindcss/typography";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -24,5 +25,8 @@ export default {
 
     // https://github.com/jamiebuilds/tailwindcss-animate
     tailwindcssAnimate,
+
+    // https://github.com/tailwindlabs/tailwindcss-typography
+    tailwindcssTypography,
   ],
 };
